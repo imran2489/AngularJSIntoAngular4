@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html ng-app="phonecatApp">
+<!--<html>-->
+<head>
+  <title>Angular QuickStart</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="app/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <link href="app/app.css" rel="stylesheet" />
+  <link href="app/app.animations.css" rel="stylesheet" />
+  <script src="app/bower_components/jquery/dist/jquery.js"></script>
+  <script src="app/bower_components/angular/angular.js"></script>
+  <script src="app/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="app/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app/bower_components/angular-route/angular-route.js"></script>
+
+  <script src="app/app.module.ajs.js"></script>
+  <script src="app/app.config.js"></script>
+  <script src="app/app.animations.js"></script>
+  <script src="app/main.js"></script>
+  <script src="app/core/core.module.js"></script>
+  <script src="app/core/checkmark/checkmark.filter.js"></script>
+  <script src="app/core/phone/phone.module.js"></script>
+  <script src="app/core/phone/phone.service.js"></script>
+  <script src="app/phone-list/phone-list.module.js"></script>
+  <script src="app/phone-list/phone-list.component.js"></script>
+  <script src="app/phone-detail/phone-detail.module.js"></script>
+  <script src="app/phone-detail/phone-detail.component.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="./systemjs.config.js"></script>
+  <script>
+    System.import('main.js').catch(function(err){ console.error(err); });
+  </script>
+</head>
+<!--<body>
+  <my-app>Loading AppComponent content here ...</my-app>
+</body>-->
+<body ng-controller="Main as vm">
+  <my-app>Loading AppComponent content here ...</my-app>
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+
+
+</body>
+
+
+
+</html>
