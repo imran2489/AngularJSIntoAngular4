@@ -6,16 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var CheckmarkPipe = (function () {
+    function CheckmarkPipe() {
     }
-    return AppComponent;
+    CheckmarkPipe.prototype.transform = function (input) {
+        return input ? '\u2713' : '\u2718';
+    };
+    return CheckmarkPipe;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'phonecat-app',
-        template: '<router-outlet></router-outlet>'
-    })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+CheckmarkPipe = __decorate([
+    core_1.Pipe({ name: 'checkmark' })
+], CheckmarkPipe);
+exports.CheckmarkPipe = CheckmarkPipe;
+//# sourceMappingURL=checkmark.pipe.js.map
